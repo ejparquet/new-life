@@ -1,0 +1,7 @@
+{
+  "name": "new-life-fellowship",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node src/build.mjs", "serve": "node serve.mjs" },
+  "dependencies": { "puppeteer": "^24.43.0" }
+}
