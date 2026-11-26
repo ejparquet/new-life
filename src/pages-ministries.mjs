@@ -208,7 +208,15 @@ ${pageHead({ title: 'Care Ministry', crumbs: [['Ministries', 'ministries.html']]
 export const give = {
   slug: 'give.html', title: 'Give',
   body: `
-${pageHead({ title: 'Give', crumbs: [['Give', '']], intro: 'New Life is thankful for your obedience to God’s Word and your generosity of giving your resources for ministry at New Life, our community, and beyond.' })}
+${pageHead({ title: 'Give', crumbs: [['Give', '']], intro: 'New Life is thankful for your obedience to God’s Word and your generosity of giving your resources for ministry at New Life, our community, and beyond.', media: `<div class="give-ways">
+      <svg class="gw-hand" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6.5c-1.6-2-4.8-1.8-5.8.8-1-2.6-4.2-2.8-5.8-.8-1.6 2 -.6 4.8 1.6 6.6l4.2 3.4 4.2-3.4c2.2-1.8 3.2-4.6 1.6-6.6z"/><path d="M4 26h6v14H4z"/><path d="M10 28h6.5c1.6 0 3 .6 4.2 1.6l1.3 1.1h6.5a2.6 2.6 0 0 1 0 5.2H19"/><path d="M10 38h18.5c1.6 0 3.1-.6 4.3-1.6l9.4-8.2a2.6 2.6 0 0 0-3.5-3.9L30.5 31"/></svg>
+      <h2 class="gw-title">Ways to give online</h2>
+      <ul class="gw-list">
+        <li><a class="gw-row" href="${LINKS.give}"><svg class="gw-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/></svg><span><strong>Website</strong><span>nlifefellowship.org/give</span></span></a></li>
+        <li><div class="gw-row"><svg class="gw-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><span><strong>App</strong><span>Apple App Store &amp; Google Play Store</span></span></div></li>
+        <li><a class="gw-row" href="sms:77977?&amp;body=NEWLIFETX"><svg class="gw-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01" stroke-width="2.2"/></svg><span><strong>Text</strong><span>NEWLIFETX to 77977</span></span></a></li>
+      </ul>
+    </div>` })}
 <section class="section">
   <div class="wrap grid lg:grid-cols-[1.3fr_1fr] gap-12 items-start">
     <div>

@@ -32,7 +32,7 @@ const broken = [];
 for (const p of pages) {
   const html = fs.readFileSync(path.join(root, p.slug), 'utf8');
   for (const [, href] of html.matchAll(/href="([^"#]+)/g)) {
-    if (/^(https?:|mailto:|tel:)/.test(href) || href.includes("'")) continue;
+    if (/^(https?:|mailto:|tel:|sms:)/.test(href) || href.includes("'")) continue;
     const file = href.split('?')[0];
     if (!slugs.has(file) && !fs.existsSync(path.join(root, file))) broken.push(`${p.slug} -> ${href}`);
   }

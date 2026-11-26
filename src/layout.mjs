@@ -422,7 +422,6 @@ const ORIGINAL_HERO = {
   "Board of Elders": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1601344550846-2VKGN9PFZLBMSSOYEHO8/DSC_0424.jpg", "New Life elders standing together on stage"],
   "Care Ministry": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1612394661755-3WIBUQV0C4OLNJ0FYMMG/Care+photo+2.jpg", "A care ministry visit with a gift basket"],
   "Meet the New Life Team": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/f5de8743-386d-4cb1-b185-39c94d8ec29a/Large+Group+Photo.jpg", "The New Life staff"],
-  "Give": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1673156117562-JI2ZT16NQQ4JMXUSSYBE/New+Life+Giving+Updated.png", "Ways to give online: website, app, and text"],
   "KidzLife Ministry": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1610059885063-YHAFPVGKQEA2FRX4CLGV/DSC_0405.jpg", "KidzLife children gathered together"],
   "Leaders & Volunteer Hub": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1648421387380-I6CTNY4XLELDQK3K3XGQ/B08A0117-min.jpg", "A volunteer running a camera during a service"],
   "Connecting in community": ["https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1612398761382-VSU18671VH6JXP9U4Z7B/39062.jpeg", "A group of young adults at New Life"],
@@ -461,7 +460,7 @@ export const videoToggle = `<button type="button" class="hero-pause" data-video-
 export const headTitles = new Set();
 
 // Interior page header: motion atmosphere + the page's photo shown whole, edges feathered into the dark.
-export function pageHead({ title, crumbs = [], intro = '', image = '', imageAlt = '' }) {
+export function pageHead({ title, crumbs = [], intro = '', image = '', imageAlt = '', media = '' }) {
   const trail = [['Home', 'index.html'], ...crumbs];
   const plain = title.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&');
   headTitles.add(plain);
@@ -471,13 +470,13 @@ export function pageHead({ title, crumbs = [], intro = '', image = '', imageAlt 
 <section class="page-head">
   <video class="ph-atmo" data-hero-video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="assets/video/hero-atmosphere.mp4" type="video/mp4"></video>
   ${videoToggle}
-  <div class="wrap ph-grid${image ? ' has-img' : ''}">
+  <div class="wrap ph-grid${image || media ? ' has-img' : ''}">
     <div class="ph-copy">
       <nav class="crumbs" aria-label="Breadcrumb"><ol class="flex flex-wrap gap-2">${trail.map(([t, h], i) => `<li>${h ? `<a href="${h}">${t}</a>` : `<span>${t}</span>`}${i < trail.length - 1 ? '<span aria-hidden="true" class="ml-2">/</span>' : ''}</li>`).join('')}<li><span aria-hidden="true">/</span> <span aria-current="page" class="text-[color:var(--deep)]">${plain}</span></li></ol></nav>
       <h1 class="mt-5">${title}</h1>
       ${intro ? `<p class="lede mt-6">${intro}</p>` : ''}
     </div>
-    ${image ? `
+    ${media ? `<div class="ph-media">${media}</div>` : image ? `
     <div class="ph-media">
       <div class="photo flat ph-img${/\.png(\?|$)/i.test(image) ? ' ph-img--graphic' : ''}"><img src="${image}" alt="${imageAlt}" loading="eager"></div>
     </div>` : ''}

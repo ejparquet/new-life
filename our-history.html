@@ -448,6 +448,46 @@ html:active-view-transition .announce{view-transition-name:announce}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .skip{position:absolute;left:-999px;top:.5rem;z-index:300;background:#fff;color:#070B18;padding:.6rem 1rem;border-radius:.6rem}
 .skip:focus{left:.5rem}
+
+/* Give hero: ways to give */
+.give-ways{width:100%;max-width:34rem;padding:clamp(1.75rem,3vw,2.5rem);border-radius:1.5rem;background:linear-gradient(160deg,rgba(17,26,51,.82),rgba(12,19,38,.6));border:1px solid var(--line);box-shadow:var(--sh-3);backdrop-filter:blur(10px)}
+.gw-hand{width:3.25rem;height:3.25rem;color:var(--peach)}
+.give-ways .gw-title{margin-top:1rem;font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-.03em;line-height:1.1}
+.gw-list{margin-top:1.75rem;display:grid;gap:.35rem}
+.gw-row{display:flex;align-items:center;gap:1.1rem;padding:.9rem 1rem;margin:0 -1rem;border-radius:1rem;color:var(--ink);text-decoration:none;position:relative}
+.gw-row::before{content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(125,192,238,.08);opacity:0;transition:opacity .3s var(--ease)}
+.gw-ico{width:2.4rem;height:2.4rem;flex:none;color:var(--sky);transition:transform .5s var(--spring)}
+.gw-row>span{display:grid;position:relative}
+.gw-row strong{font-size:1.1rem;color:var(--deep)}
+.gw-row>span>span{color:var(--muted);font-size:1rem}
+a.gw-row>span>span{color:var(--navy)}
+a.gw-row:hover::before{opacity:1}
+a.gw-row:hover .gw-ico{transform:translateX(3px) scale(1.06)}
+a.gw-row:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+a.gw-row:active .gw-ico{transform:scale(.94)}
+@media(prefers-reduced-motion:reduce){.gw-ico{transition:none}}
+
+/* Our History: founding story */
+.fd-vision{font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.22;letter-spacing:-.02em;color:var(--deep);max-width:30ch;text-wrap:balance}
+.fd-attr{margin-top:1.5rem;color:var(--navy);font-size:1rem}
+.fd-grid{margin-top:clamp(4rem,8vw,7rem);display:grid;gap:3.5rem;align-items:center}
+@media(min-width:1024px){.fd-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(3rem,6vw,6rem)}}
+.fd-photos{position:relative;padding-bottom:18%}
+.fd-ph{margin:0}
+.fd-ph .photo{border-radius:1.25rem;overflow:hidden;box-shadow:var(--sh-2)}
+.fd-ph img{display:block;width:100%;height:100%;object-fit:cover}
+.fd-ph--a{width:78%}
+.fd-ph--a .photo{aspect-ratio:4/3}
+.fd-ph--b{position:absolute;right:0;bottom:0;width:46%;z-index:2}
+.fd-ph--b .photo{aspect-ratio:4/5;box-shadow:var(--sh-3);outline:6px solid var(--bg)}
+.fd-ph figcaption{margin-top:.7rem;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.fd-ph--a figcaption{max-width:28ch}
+.fd-born{font-size:clamp(2.1rem,3.6vw,3.2rem);letter-spacing:-.03em;line-height:1.08}
+.fd-facts{margin:2rem 0;border-top:1px solid var(--line)}
+.fd-facts>div{display:grid;grid-template-columns:9.5rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.fd-facts dt{color:var(--muted);font-size:.95rem}
+.fd-facts dd{margin:0;font-family:var(--display);font-size:clamp(1.25rem,1.8vw,1.55rem);color:var(--deep);letter-spacing:-.01em}
+@media(max-width:520px){.fd-facts>div{grid-template-columns:1fr;gap:.15rem}}
 </style>
 
 </head>
@@ -597,16 +637,25 @@ html:active-view-transition .announce{view-transition-name:announce}
     </div>
   </div>
 </section>
-<section class="section">
-  <div class="wrap grid lg:grid-cols-[1.2fr_1fr] gap-14">
-    <div class="prose-nl">
-      <p>But the key to his vision was not just a religious gathering of people, but a body of believers who were genuine toward one another, genuine to their worship, and committed to sharing their faith with others to help bring unbelievers to Christ.</p>
-      <p>Pastor Pugh’s prayer became a reality on December 21st, 2003, when he and a core group of 40 adults and children held their first public worship service at an Arlington YMCA. New Life Fellowship was born.</p>
-      <p>From our humble beginnings and throughout our journey as a church body, God has demonstrated through countless moments and exciting memories that both His faithfulness and His favor were upon us.</p>
-    </div>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="photo soft rounded-[1.5rem] aspect-square"><img src="https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1612446287703-FODU6GKP5N24Y0OREVJN/ocbf.jpg?format=800w" alt="Early days of the church"></div>
-      <div class="photo soft rounded-[1.5rem] aspect-square mt-10"><img src="https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1612447838607-4Y9VKVEJQAM43TAPKEXE/Sister%2BJackie%2Band%2BPugh%2B1.jpg?format=800w" alt="Jackie and Dr. Maurice Pugh"></div>
+<section class="section founding">
+  <div class="wrap">
+    <blockquote class="fd-vision">Not just a religious gathering of people, but a body of believers who were genuine toward one another, genuine to their worship, and committed to sharing their faith with others to help bring unbelievers to Christ.</blockquote>
+    <p class="fd-attr">The vision of Dr. Maurice Pugh</p>
+    <div class="fd-grid">
+      <div class="fd-photos">
+        <figure class="fd-ph fd-ph--a"><div class="photo soft"><img src="https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1612446287703-FODU6GKP5N24Y0OREVJN/ocbf.jpg?format=800w" alt="Dr. Pugh and church members standing before a minister on stage" loading="lazy"></div><figcaption>From New Life’s early days</figcaption></figure>
+        <figure class="fd-ph fd-ph--b"><div class="photo soft"><img src="https://images.squarespace-cdn.com/content/v1/5f6615d1c524cf0fc1c719ea/1612447838607-4Y9VKVEJQAM43TAPKEXE/Sister%2BJackie%2Band%2BPugh%2B1.jpg?format=800w" alt="Jackie and Dr. Maurice Pugh embracing" loading="lazy"></div><figcaption>Jackie and Dr. Maurice Pugh</figcaption></figure>
+      </div>
+      <div class="fd-story">
+        <h2 class="fd-born">New Life Fellowship was born.</h2>
+        <p class="mt-6">Pastor Pugh’s prayer became a reality when he and a core group of adults and children held their first public worship service.</p>
+        <dl class="fd-facts">
+          <div><dt>First service</dt><dd>December 21, 2003</dd></div>
+          <div><dt>Founding group</dt><dd>40 adults &amp; children</dd></div>
+          <div><dt>Where</dt><dd>An Arlington YMCA</dd></div>
+        </dl>
+        <p>From our humble beginnings and throughout our journey as a church body, God has demonstrated through countless moments and exciting memories that both His faithfulness and His favor were upon us.</p>
+      </div>
     </div>
   </div>
 </section>

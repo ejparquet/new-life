@@ -438,16 +438,25 @@ export const ourHistory = {
   slug: 'our-history.html', title: 'Our History',
   body: `
 ${pageHead({ title: 'Our History', crumbs: [['About Us', 'about-us.html']], intro: 'In late December 2003, a spirit-led dream of Dr. Maurice Pugh came to life. That dream was to establish a church that would exemplify the ultimate church depicted in the New Testament, an Acts 2 church.', image: IMG.hist1, imageAlt: 'A church service with people standing before a minister on stage' })}
-<section class="section">
-  <div class="wrap grid lg:grid-cols-[1.2fr_1fr] gap-14">
-    <div class="prose-nl">
-      <p>But the key to his vision was not just a religious gathering of people, but a body of believers who were genuine toward one another, genuine to their worship, and committed to sharing their faith with others to help bring unbelievers to Christ.</p>
-      <p>Pastor Pugh’s prayer became a reality on December 21st, 2003, when he and a core group of 40 adults and children held their first public worship service at an Arlington YMCA. New Life Fellowship was born.</p>
-      <p>From our humble beginnings and throughout our journey as a church body, God has demonstrated through countless moments and exciting memories that both His faithfulness and His favor were upon us.</p>
-    </div>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="photo soft rounded-[1.5rem] aspect-square"><img src="${IMG.hist1}" alt="Early days of the church"></div>
-      <div class="photo soft rounded-[1.5rem] aspect-square mt-10"><img src="${IMG.hist2}" alt="Jackie and Dr. Maurice Pugh"></div>
+<section class="section founding">
+  <div class="wrap">
+    <blockquote class="fd-vision">Not just a religious gathering of people, but a body of believers who were genuine toward one another, genuine to their worship, and committed to sharing their faith with others to help bring unbelievers to Christ.</blockquote>
+    <p class="fd-attr">The vision of Dr. Maurice Pugh</p>
+    <div class="fd-grid">
+      <div class="fd-photos">
+        <figure class="fd-ph fd-ph--a"><div class="photo soft"><img src="${IMG.hist1}" alt="Dr. Pugh and church members standing before a minister on stage" loading="lazy"></div><figcaption>From New Life’s early days</figcaption></figure>
+        <figure class="fd-ph fd-ph--b"><div class="photo soft"><img src="${IMG.hist2}" alt="Jackie and Dr. Maurice Pugh embracing" loading="lazy"></div><figcaption>Jackie and Dr. Maurice Pugh</figcaption></figure>
+      </div>
+      <div class="fd-story">
+        <h2 class="fd-born">New Life Fellowship was born.</h2>
+        <p class="mt-6">Pastor Pugh’s prayer became a reality when he and a core group of adults and children held their first public worship service.</p>
+        <dl class="fd-facts">
+          <div><dt>First service</dt><dd>December 21, 2003</dd></div>
+          <div><dt>Founding group</dt><dd>40 adults &amp; children</dd></div>
+          <div><dt>Where</dt><dd>An Arlington YMCA</dd></div>
+        </dl>
+        <p>From our humble beginnings and throughout our journey as a church body, God has demonstrated through countless moments and exciting memories that both His faithfulness and His favor were upon us.</p>
+      </div>
     </div>
   </div>
 </section>
