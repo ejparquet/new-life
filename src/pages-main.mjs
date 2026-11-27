@@ -160,7 +160,7 @@ export const home = {
 <section class="section bg-deep relative overflow-hidden">
   <div class="ring" style="width:46rem;height:46rem;right:-14rem;top:-10rem;opacity:.15"></div>
   <div class="wrap grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center relative">
-    <div class="photo soft orb w-44 h-44 md:w-60 md:h-60" style="box-shadow:var(--sh-3)"><img src="${IMG.pastorHead}" alt="Dr. Maurice Pugh"></div>
+    <div class="photo soft orb w-44 h-44 md:w-60 md:h-60" style="box-shadow:var(--sh-3)"><img src="${IMG.pastorHead}" alt="Dr. Maurice Pugh" style="object-position:50% 8%"></div>
     <figure>
       <blockquote class="text-[clamp(1.5rem,3vw,2.35rem)] leading-[1.35] italic text-white" style="font-family:var(--display)">“New Life Fellowship is a church that strives to become a diverse community of spiritually mature believers committed to seeing lives changed with the good news of Jesus Christ.”</blockquote>
       <figcaption class="mt-6 ui">Dr. Maurice Pugh, Senior Pastor · ${a('meet-our-pastor.html', 'Meet our pastor')}</figcaption>
